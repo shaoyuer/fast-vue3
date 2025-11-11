@@ -26,7 +26,6 @@ export default typescriptEslint.config(
       'no-use-before-define': 'off',
       'space-before-function-paren': 'off',
       'vue/multi-word-component-names': 'off',
-      'vue/script-setup-uses-vars': 'error',
       'vue/no-reserved-component-names': 'off',
       'vue/custom-event-name-casing': 'off',
       'vue/attributes-order': 'off',

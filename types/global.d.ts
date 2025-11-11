@@ -33,9 +33,9 @@ declare global {
   }
 
   declare interface ViteEnv {
-    VITE_OPEN_PROXY?: Boolean;
-    VITE_USE_MOCK: Boolean;
-    VITE_USE_COMPRESS: Boolean;
+    VITE_OPEN_PROXY?: boolean;
+    VITE_USE_MOCK: boolean;
+    VITE_USE_COMPRESS: boolean;
   }
 
   declare function parseInt(s: string | number, radix?: number): number;

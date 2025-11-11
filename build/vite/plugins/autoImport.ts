@@ -4,7 +4,8 @@
  */
 
 import AutoImport from 'unplugin-auto-import/vite';
-import { ElementPlusResolver, AntDesignVueResolver, TDesignResolver } from 'unplugin-vue-components/resolvers';
+import { ElementPlusResolver, AntDesignVueResolver, ArcoResolver } from 'unplugin-vue-components/resolvers';
+import { TDesignResolver } from '@tdesign-vue-next/auto-import-resolver';
 import { VueRouterAutoImports } from 'unplugin-vue-router';
 
 export const AutoImportDeps = () => {
@@ -23,11 +24,13 @@ export const AutoImportDeps = () => {
     ],
     resolvers: [
       ElementPlusResolver(),
-      AntDesignVueResolver(),
+      AntDesignVueResolver({ resolveIcons: true, importStyle: false, prefix: 'Ant' }),
       TDesignResolver({
         library: 'vue-next',
       }),
-      // ArcoResolver(),
+      ArcoResolver({
+        sideEffect: true,
+      }),
     ],
   });
 };

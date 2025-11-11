@@ -110,6 +110,7 @@
     "codemirror",
     "commitlint",
     "cropperjs",
+    "devui",
     "echarts",
     "ERUDA",
     "esnext",

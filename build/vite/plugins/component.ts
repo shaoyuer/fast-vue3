@@ -8,12 +8,12 @@ import {
   ElementPlusResolver,
   VueUseComponentsResolver,
   AntDesignVueResolver,
-  TDesignResolver,
   NaiveUiResolver,
-  // ArcoResolver,
   DevUiResolver,
   IduxResolver,
+  ArcoResolver,
 } from 'unplugin-vue-components/resolvers';
+import { TDesignResolver } from '@tdesign-vue-next/auto-import-resolver';
 
 export const AutoRegistryComponents = () => {
   return Components({
@@ -29,15 +29,15 @@ export const AutoRegistryComponents = () => {
     resolvers: [
       ElementPlusResolver(),
       VueUseComponentsResolver(),
-      AntDesignVueResolver({ resolveIcons: true, importStyle: false }),
+      AntDesignVueResolver({ resolveIcons: true, importStyle: false, prefix: 'Ant' }),
       TDesignResolver({
         library: 'vue-next',
       }),
-      // ArcoResolver({
-      //   sideEffect: true,
-      // }),
+      ArcoResolver({
+        sideEffect: true,
+      }),
       NaiveUiResolver(),
-      DevUiResolver({ importStyle: true }),
+      DevUiResolver(),
       IduxResolver({ importStyle: 'css', importStyleTheme: 'default' }),
     ],
   });
